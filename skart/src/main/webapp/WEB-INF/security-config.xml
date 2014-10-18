@@ -18,13 +18,13 @@
   
  
  
+<intercept-url pattern="/index" access="hasAnyRole('Role_Admin','Role_Student','Role_Parent','Role_Employee')"/> 
  
-  <intercept-url pattern="/index" access="hasAnyRole('Role_Admin','Role_Employee','Role_Student','Role_Parent')"/> 
  
  <form-login login-processing-url="/j_spring_security_check" login-page="/login" 
  	authentication-failure-url="/login?authfailed" default-target-url="/index" always-use-default-target="true"/>
  	
- 	<logout logout-url="/j_spring_security_logout" logout-success-url="/login?logout"/>
+ 	<logout logout-url="/j_spring_security_logout" logout-success-url="/login?logout" invalidate-session="true" delete-cookies="true"/>
  </http>
  
   <!-- <authentication-manager>

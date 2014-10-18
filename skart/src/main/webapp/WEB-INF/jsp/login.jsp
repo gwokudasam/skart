@@ -39,6 +39,15 @@
 
     <!-- jQuery -->
     <script src="${conPath}/resources/bower_components/jquery/jquery.min.js"></script>
+    
+    
+    <script type ="text/javascript">
+		    dojo.addOnLoad(function(){
+		    	alert("hi");
+		    	//document.musicPrefs.other.value="Afrobeat";
+			});
+    </script>
+    
 
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -96,7 +105,7 @@
                 <fieldset>
                     <div class="input-group input-group-lg">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user red"></i></span>
-                        <input type="text" class="form-control" placeholder="Username" name="j_username">
+                        <input type="text" class="form-control" placeholder="username" name="j_username" id = "j_username" value=""/>
                     </div>
                     <div class="clearfix"></div><br>
 
