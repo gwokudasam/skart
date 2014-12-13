@@ -1,9 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+
 <c:set var="baseURL" value="${pageContext.servletContext.contextPath}" />
-<c:set var="classParam" value="1st Class" />
-<c:set var="sectionParam" value="A" />
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -22,7 +21,7 @@ position: absolute;
 }
 #pdf{
 /*position: absolute;*/
-   margin-left: 340px;
+   margin-left: 620px;
 }
 
 </style>
@@ -45,7 +44,7 @@ position: absolute;
 	rel="stylesheet" type="text/css" />
 
 <%-- customized javaScript code to manage JTable --%>
-<script src="${baseURL}/resources/scripts/student.jtable.js"
+<script src="${baseURL}/resources/scripts/employee.jtable.js"
 	type="text/javascript"></script>
 
 <!--Start Excel & PDF scripts  -->
@@ -66,11 +65,6 @@ position: absolute;
 	type="text/javascript"></script>
 
 <!--End Excel & Pdf scripts  -->
-
-<!-- Modal Box -->
-<script src="${baseURL}/resources/scripts/simple-modal.js"
-    type="text/javascript"></script>
-<!-- Modal Box ends here -->
 
 <!-- Page CSS  -->
 <style type="text/css">
@@ -106,64 +100,22 @@ div.jtable-main-container {
 	<div>
 		<ul class="breadcrumb">
 
-			<li><a>Student Details</a></li>
+			<li><a>Employee Details</a></li>
 		</ul>
 	</div>
 
 	<div >
 		<form id="abc">
-			Search: <input type="text" name="" id="search" /> 
-			Class: <select id="getSection" name="className">
-				<option value="1st class">1st class</option>
-				<option value="2nd class">2nd class</option>
-				<option value="3rd class">3rd class</option>
-				<option value="4th class">4rd class</option>
-				<option value="5th class">5th class</option>
-				<option value="6th class">6th class</option>
-				<option value="7th class">7th class</option>
-				<option value="8th class">8th class</option>
-				<option value="9th class">9th class</option>
-				<option value="10th class">10th class</option>
-				<option value="0">All Classes</option>
-			</select> section:<select id="recieveSection" name="section">
-				<option value="">Selected</option>
-			</select>
+			Search: <input type="text" name="" id="search" />
 		</form>
 
-		<script type="text/javascript">
-			$(document).ready(function(){
-				$("#getSection").change(function(){
-					classParam=$("#getSection").val();
-					if(classParam ==0)
-						 $('#StudentTableContainer').jtable('load',{});
-					else{
-					$.get("${baseURL}/student/getStudentByClassName/"+ $(this).val()).done(function(data) {
-						$("#recieveSection option").remove();
-						$("#recieveSection").append("<option value=''>Selected</option>");
-						$.each(data,function(index,val){
-								$("#recieveSection").append("<option value="+val+">"+val+"</option>");
-						});
-				
-					});
-				}
-				});
-				
-			});
-			$(document).ready(function(){
-				$("#recieveSection").change(function(){					
-					 $('#StudentTableContainer').jtable('load',{class:$("#getSection").val(),section:$("#recieveSection").val()});
-														
-				});	 
-				
-			});
 		
-			</script>
-		<form id="abc" action="${baseURL}/student/exportexcel" method="post">
+		<form id="abc" action="${baseURL}/employee/exportexcel" method="post">
 			<button id="excel" class="abc" type="submit">
 				<img src="resources/img/icon_excel.png"> Download Excel
 			</button>
 		</form>
-		<form id="abc" action="${baseURL}/student/exportpdf" method="post">
+		<form id="abc" action="${baseURL}/employee/exportpdf" method="post">
 			<button id="pdf" class="abc" type="submit">
 				<img src="resources/img/icon_pdf.png"> Download PDF
 			</button>
@@ -175,7 +127,7 @@ div.jtable-main-container {
 		<a id="dlink" style="display: none;"></a>
 		<!-- Dummy anchor Ends -->
 
-		<div id="StudentTableContainer" style="width: 1100px;"></div>
+		<div id="EmployeeTableContainer" style="width: 1100px;"></div>
 		
 	</div>
 	<div id="SelectedRowList"></div>

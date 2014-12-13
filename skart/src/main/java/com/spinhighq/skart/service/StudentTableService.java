@@ -20,7 +20,14 @@ public interface StudentTableService {
 	
 	public int getStudentCount()throws StudentException;
 
-	public List<StudentTable> getStudentByClassNmae(String className) throws StudentException;
+	public List<String> getStudentByClassName(String className) throws StudentException;
+	
+	//get the list of student data from dataBase  
+	public List<StudentTable> getStudentData()throws StudentException;
+	
+	public List<StudentTableBean> getStudentTableData(String className,String section)throws StudentException;
+	
+	
 	
 
 }

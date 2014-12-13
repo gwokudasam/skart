@@ -6,15 +6,17 @@
 
 <div>
 	<ul class="breadcrumb">
-		
-		<li><a >Dashboard</a></li>
+
+		<li><a>Dashboard</a></li>
 	</ul>
 </div>
 
 <div class=" row">
 	<div class="col-md-2 col-sm-3 col-xs-6"
 		style="position: relative; left: 100px;">
-		<a href="#" data-toggle="tooltip" title="Student Details" id="Student_Table1" name="Student_Table" onClick="ajaxCallback(this);"> <img
+		<a href="#" data-toggle="tooltip" title="Student Details"
+			id="Student_Table1" name="Student_Table"
+			onClick="ajaxCallback(this);"> <img
 			src="${conPath}/resources/img/student-details.jpg"> </img>
 			<div>
 				<strong>Student Details</strong>
@@ -25,7 +27,8 @@
 
 	<div class="col-md-2 col-sm-3 col-xs-6"
 		style="position: relative; left: 100px;">
-		<a data-toggle="tooltip" title="Employee Details" href="#"> <img
+		<a data-toggle="tooltip" title="Employee Details" href="#"
+		id="Employee_Table1" name="Employee_Table" onClick="ajaxCallback(this);""> <img
 			src="${conPath}/resources/img/employee.png"> </img>
 			<div>
 				<strong>Employee Details</strong>

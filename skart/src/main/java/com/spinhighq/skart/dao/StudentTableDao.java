@@ -51,8 +51,12 @@ public interface StudentTableDao {
      */
 	public int getStudentCount();
 	
+	//get the list of data from dataBase
+	public List<StudentTable> getStudentData();
 	
-	public List<StudentTable> getStudentByClassName(String className);
+	public List<String> getStudentByClassName(String className);
+	
+	public List<StudentTable> getStudentTableData(String className,String section);
 	
 
 }

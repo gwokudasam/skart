@@ -1,8 +1,9 @@
 package com.spinhighq.skart.web.dto.datatable.bean;
 
-import java.sql.Blob;
-
 import org.codehaus.jackson.annotate.JsonProperty;
+
+/*import com.spinhighq.skart.model.ClassName;
+import com.spinhighq.skart.model.Section;*/
 
 public class StudentTableBean {
 	
@@ -32,7 +33,9 @@ public class StudentTableBean {
 	
 	private Float performanceRating;
 	
-	private byte[] photo;
+	private String dateOfJoning;
+	
+	private String photo;
 	
 	@JsonProperty("StudentId")
 	public String getStudentId() {
@@ -151,12 +154,21 @@ public class StudentTableBean {
 		this.performanceRating = performanceRating;
 	}
 	
-	@JsonProperty("photo")
-	public byte[] getPhoto() {
+	@JsonProperty("DateOfJoning")	
+	public String getDateOfJoning() {
+		return dateOfJoning;
+	}
+
+	public void setDateOfJoning(String dateOfJoning) {
+		this.dateOfJoning = dateOfJoning;
+	}
+
+	@JsonProperty("Photo")
+	public String getPhoto() {
 		return photo;
 	}
 
-	public void setPhoto(byte[] photo) {
+	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
 	

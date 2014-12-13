@@ -8,7 +8,6 @@ import org.springframework.stereotype.Repository;
 
 import com.spinhighq.skart.dao.StudentTableDao;
 import com.spinhighq.skart.model.StudentTable;
-import com.spinhighq.skart.web.dto.datatable.bean.StudentTableBean;
 
 @Repository
 public class StudentTableDaoImpl implements StudentTableDao {
@@ -31,7 +30,7 @@ public class StudentTableDaoImpl implements StudentTableDao {
 			String sortingOrder) {
 
 		return (List<StudentTable>) sessionFactory.getCurrentSession()
-				.createQuery(" from StudentTable order by " + sortingOrder)
+				.createQuery(" from StudentTable order by className,section, " + sortingOrder)
 				.setFirstResult(startIndex).setMaxResults(pageSize).list();
 	}
 
@@ -74,13 +73,28 @@ public class StudentTableDaoImpl implements StudentTableDao {
 	}
 
 	@SuppressWarnings("unchecked")
-	public List<StudentTable> getStudentByClassName(String className) {
-		List<StudentTable> studentTable = (List<StudentTable>) sessionFactory
-				.getCurrentSession()
-				.createQuery("from StudentTable where className=:className")
-				.setParameter("className", className).list();
-		return studentTable;
-
+	public List<String> getStudentByClassName(String className) {
+		return sessionFactory.getCurrentSession().createQuery("select section from StudentTable where className=:className").setParameter("className", className).list();
+		
 	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	// get the list of student data from database table
+	public List<StudentTable> getStudentData() {
+		List<StudentTable> list=sessionFactory.getCurrentSession().createQuery("from StudentTable").list();
+		return list;
+				
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<StudentTable> getStudentTableData(String className, String section) {
+		return sessionFactory.getCurrentSession().createQuery("from StudentTable where className=:className and section=:section").setParameter("className",className).setParameter("section",section).list();
+		
+		 
+	}
+
+	
 
 }

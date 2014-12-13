@@ -21,6 +21,9 @@ public class StudentTable {
 	private String dateOfBirth;
 	
 	private String className;
+	//private ClassName className;
+	
+	private String dateOfJoning;
 	
 	private String bloadGroup;
 	
@@ -31,6 +34,7 @@ public class StudentTable {
 	private Long mobilePhone;
 	
 	private String section;
+	//private Section section;
 	
 	private Float currentAttendance;
 	
@@ -38,25 +42,26 @@ public class StudentTable {
 	
 	private Float performanceRating;
 	
-	private byte[] photo;
+	private String photo;
 	
 
 	public StudentTable() {
 		super();
 		
 	}
-	
+
 	public StudentTable(Integer id, String name, String email,
-			String dateOfBirth, String className, String bloadGroup,
-			String address, String parentName, Long mobilePhone,
-			String section, Float currentAttendance, Float overalAttendance,
-			Float performanceRating, byte[] photo) {
+			String dateOfBirth, String className, String dateOfJoning,
+			String bloadGroup, String address, String parentName,
+			Long mobilePhone, String section, Float currentAttendance,
+			Float overalAttendance, Float performanceRating, String photo) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.dateOfBirth = dateOfBirth;
 		this.className = className;
+		this.dateOfJoning = dateOfJoning;
 		this.bloadGroup = bloadGroup;
 		this.address = address;
 		this.parentName = parentName;
@@ -102,16 +107,24 @@ public class StudentTable {
 	public String getDateOfBirth() {
 		return dateOfBirth;
 	}
-
-
-
 	public void setDateOfBirth(String dateOfBirth) {
 		this.dateOfBirth = dateOfBirth;
+	}
+	
+	@Column(name="DateOfJoning")
+	public String getDateOfJoning() {
+		return dateOfJoning;
+	}
+
+	public void setDateOfJoning(String dateOfJoning) {
+		this.dateOfJoning = dateOfJoning;
 	}
 
 
 
-	@Column(name="ClassName")
+	//@ManyToOne
+    //@JoinColumn(name="class_id")
+	@Column(name="className")
 	public String getClassName() {
 		return className;
 	}
@@ -156,7 +169,9 @@ public class StudentTable {
 		this.parentName = parentName;
 	}
 
-	@Column(name="Section")
+	//@ManyToOne
+   // @JoinColumn(name="section_id")
+	@Column(name="section")
 	public String getSection() {
 		return section;
 	}
@@ -192,18 +207,14 @@ public class StudentTable {
 		this.performanceRating = performanceRating;
 	}
 	
+
 	@Column(name="photo")
-	public byte[] getPhoto() {
+	public String getPhoto() {
 		return photo;
 	}
 
-	public void setPhoto(byte[] photo) {
+	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
 	
-	
-	
-	
-	
-
 }

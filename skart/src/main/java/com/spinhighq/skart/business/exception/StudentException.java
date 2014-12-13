@@ -2,6 +2,11 @@ package com.spinhighq.skart.business.exception;
 
 public class StudentException extends Exception{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	public StudentException() {
 		super("Student Exception occured due to the business logic failure");
 		

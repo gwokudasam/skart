@@ -73,11 +73,11 @@ public class LoginController {
 		//model.addAttribute("msg", "u r login success");
 		return "dashboard";
 	}
-	@RequestMapping(value="/student")
+	/*@RequestMapping(value="/student")
 	public String studentHome(){
 		
 		return "student";
-	}
+	}*/
 	/*@RequestMapping(value="/Student_Table")
 	public String studentDetails(){
 		

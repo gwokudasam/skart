@@ -1,11 +1,18 @@
 package com.spinhighq.skart.service.impl;
 
-import java.io.OutputStream;
-import java.sql.Blob;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.poi.hssf.usermodel.HSSFCell;
+import org.apache.poi.hssf.usermodel.HSSFCellStyle;
+import org.apache.poi.hssf.usermodel.HSSFRow;
+import org.apache.poi.hssf.usermodel.HSSFSheet;
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.hssf.util.HSSFColor;
+import org.apache.poi.ss.usermodel.CellStyle;
+import org.apache.poi.ss.usermodel.Font;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -41,12 +48,14 @@ public class StudentTableServiceImpl implements StudentTableService {
 			studentTable.setBloadGroup(bean.getBloadGroup());
 			studentTable.setAddress(bean.getAddress());
 			studentTable.setParentName(bean.getParentName());
+			studentTable.setDateOfJoning(bean.getDateOfJoning().toString());
 			studentTable.setMobilePhone(new Long(bean.getMobilePhone()));
 			studentTable.setSection(bean.getSection());
 			studentTable.setCurrentAttendance(new Float(bean.getCurrentAttendance()));
 			studentTable.setOveralAttendance(new Float(bean.getOveralAttendance()));
 			studentTable.setPerformanceRating(new Float(bean.getPerformanceRating()));
-			studentTable.setPhoto(bean.getPhoto());
+			
+			System.out.println(bean.getPhoto());
 			tableDao.addStudent(studentTable);
 		}
 		catch(Exception e){
@@ -77,6 +86,7 @@ public class StudentTableServiceImpl implements StudentTableService {
 				 bean.setName(studentTable.getName());
 				 bean.setEmail(studentTable.getEmail());
 				 bean.setDateOfBirth(studentTable.getDateOfBirth());
+				 bean.setDateOfJoning(studentTable.getDateOfJoning());
 				 bean.setClassName(studentTable.getClassName());
 				 bean.setBloadGroup(studentTable.getBloadGroup());
 				 bean.setAddress(studentTable.getAddress());
@@ -86,7 +96,8 @@ public class StudentTableServiceImpl implements StudentTableService {
 				 bean.setCurrentAttendance(studentTable.getCurrentAttendance().floatValue());
 				 bean.setOveralAttendance(studentTable.getOveralAttendance().floatValue());
 				 bean.setPerformanceRating(studentTable.getPerformanceRating().floatValue());
-				 bean.setPhoto(studentTable.getPhoto());
+				 //bean.setPhoto(studentTable.getPhoto());
+								 
 				 list.add(bean);				 
 			 }
 			
@@ -105,6 +116,7 @@ public class StudentTableServiceImpl implements StudentTableService {
 			studentTable.setEmail(bean.getEmail());
 			studentTable.setDateOfBirth(bean.getDateOfBirth());
 			studentTable.setClassName(bean.getClassName());
+			studentTable.setDateOfJoning(bean.getDateOfJoning());
 			studentTable.setBloadGroup(bean.getBloadGroup());
 			studentTable.setAddress(bean.getAddress());
 			studentTable.setMobilePhone(new Long(bean.getMobilePhone()));
@@ -113,7 +125,8 @@ public class StudentTableServiceImpl implements StudentTableService {
 			studentTable.setCurrentAttendance(new Float(bean.getCurrentAttendance()));
 			studentTable.setOveralAttendance(new Float(bean.getOveralAttendance()));
 			studentTable.setPerformanceRating(new Float(bean.getPerformanceRating()));
-			studentTable.setPhoto(bean.getPhoto());
+			//studentTable.setPhoto(bean.getPhoto());
+			
 			tableDao.updateStudent(studentTable);
 			//System.out.println(tableDao);
 		}
@@ -142,9 +155,10 @@ public class StudentTableServiceImpl implements StudentTableService {
 			throw new StudentException("Exception thrown while getting stusents count  "+e.getMessage());
 		}
 	}
+	
 
 	@Transactional
-	public List<StudentTable> getStudentByClassNmae(String className) throws StudentException{
+	public List<String> getStudentByClassName(String className) throws StudentException{
 		try{
 			return tableDao.getStudentByClassName(className);
 		}
@@ -152,6 +166,58 @@ public class StudentTableServiceImpl implements StudentTableService {
 			throw new StudentException("Exception while get the ClassName"+e.getMessage());
 			
 		}
+	}
+
+	@Override
+	@Transactional
+	public List<StudentTable> getStudentData()throws StudentException {
+		try{
+
+			List<StudentTable> studentList= tableDao.getStudentData();
+			
+			
+			return studentList;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			throw new StudentException("Exception while get the no data in the dable"+e.getMessage());
+		}
+	}
+
+	@Override
+	@Transactional
+	public List<StudentTableBean> getStudentTableData(String className,
+			String section) throws StudentException {
+		List<StudentTableBean> studentTableData = new ArrayList<StudentTableBean>();
+		try{
+			List<StudentTable> studentTableList=tableDao.getStudentTableData(className, section);
+			System.out.println(studentTableList.size());
+			for(StudentTable studentTable:studentTableList){
+				StudentTableBean bean = new StudentTableBean();
+				 bean.setStudentId(studentTable.getId().toString());
+				 bean.setName(studentTable.getName());
+				 bean.setEmail(studentTable.getEmail());
+				 bean.setDateOfBirth(studentTable.getDateOfBirth());
+				 bean.setDateOfJoning(studentTable.getDateOfJoning());
+				 bean.setClassName(studentTable.getClassName());
+				 bean.setBloadGroup(studentTable.getBloadGroup());
+				 bean.setAddress(studentTable.getAddress());
+				 bean.setParentName(studentTable.getParentName());
+				 bean.setMobilePhone(studentTable.getMobilePhone().toString());
+				 bean.setSection(studentTable.getSection());
+				 bean.setCurrentAttendance(studentTable.getCurrentAttendance().floatValue());
+				 bean.setOveralAttendance(studentTable.getOveralAttendance().floatValue());
+				 bean.setPerformanceRating(studentTable.getPerformanceRating().floatValue());
+				 //bean.setPhoto(studentTable.getPhoto());				 
+				 studentTableData.add(bean);				
+			}
+			
+		}
+		catch(Exception e){
+			System.out.println(e);
+			
+		}
+		return studentTableData;
 	}
 
 }

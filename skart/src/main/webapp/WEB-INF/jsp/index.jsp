@@ -170,6 +170,7 @@
 						<div class="nav-sm nav nav-stacked"></div>
 						<ul class="nav nav-pills nav-stacked main-menu">
 							<li class="nav-header">Main</li>
+							
 							<li><a href="#" id="dashboard" name="dashboard"
 								onClick="ajaxCallback(this);"><i
 									class="gbolyphicon glyphicon-home"></i><span> Dashboard</span></a></li>
@@ -178,9 +179,12 @@
 								onClick="ajaxCallback(this);"><i
 									class="glyphicon glyphicoon-user"></i><span> Student
 										Details </span></a></li>
-							<li><a class="ajax-link" href="employee-table.html"><i
+										
+							<li><a href="#" id="Employee_Table" name="Employee_Table"
+								onClick="ajaxCallback(this);"><i
 									class="glyphicon glyphicon-align-justify"></i><span>
 										Employee Details </span></a></li>
+										
 							<li><a class="ajax-link" href="parent-table.html"><i
 									class="glyphicon glyphicon-th-large"></i><span> Parents
 										Details </span></a></li>
@@ -243,17 +247,20 @@
 						<a href="#" data-toggle="tooltip" title="Student Details"
 							id="Student_Table1" name="Student_Table"
 							onClick="ajaxCallback(this);"> <img
-							src="${conPath}/resources/img/student-details.jpg"> </img>
-							<div>
+							src="${conPath}/resources/img/student-details.jpg"/> 
+							
 								<div>
 									<strong>StudentDetails</strong>
-								</div></a>
+								</div>
+								</a>
 					</div>
 
 					<div class="col-md-2 col-sm-3 col-xs-6"
 						style="position: relative; left: 100px;">
-						<a data-toggle="tooltip" title="Employee Details" href="#"> <img
-							src="${conPath}/resources/img/employee.png"> </img>
+						<a href="#" data-toggle="tooltip" title="Employee Details" 
+							id="Employee_Table1" name="Employee_Table"
+							onClick="ajaxCallback(this);"> <img
+							src="${conPath}/resources/img/employee.png" />
 							<div>
 								<strong>Employee Details</strong>
 							</div>
@@ -264,7 +271,7 @@
 					<div class="col-md-2 col-sm-3 col-xs-6"
 						style="position: relative; left: 100px;">
 						<a data-toggle="tooltip" title="Parent Details" href="#"> <img
-							src="${conPath}/resources/img/parents.png"> </img>
+							src="${conPath}/resources/img/parents.png"/>
 							<div>
 								<strong> &nbsp; &nbsp; Parent Details</strong>
 							</div>
@@ -277,7 +284,7 @@
 					<div class="col-md-2 col-sm-3 col-xs-6"
 						style="position: relative; left: 100px;">
 						<a data-toggle="tooltip" title="Students Attendance" href="#">
-							<img src="${conPath}/resources/img/attendance.jpg"> </img>
+							<img src="${conPath}/resources/img/attendance.jpg"/> 
 							<div>
 								<strong>Students Attendance</strong>
 							</div>
@@ -300,7 +307,7 @@
 					<div class="col-md-2 col-sm-3 col-xs-6"
 						style="position: relative; left: 100px;">
 						<a data-toggle="tooltip" title="Class Timetable" href="#"> <img
-							src="${conPath}/resources/img/timetable.png"> </img>
+							src="${conPath}/resources/img/timetable.png"/> 
 							<div>
 								<strong>Class Timetable</strong>
 							</div>
@@ -314,7 +321,7 @@
 					<div class="col-md-2 col-sm-3 col-xs-6"
 						style="position: relative; left: 100px;">
 						<a data-toggle="tooltip" title="Exams Schedule" href="#"> <img
-							src="${conPath}/resources/img/examshedule.png"> </img>
+							src="${conPath}/resources/img/examshedule.png"/> 
 							<div>
 								<strong>Exams Schedule</strong>
 							</div>
@@ -325,7 +332,7 @@
 					<div class="col-md-2 col-sm-3 col-xs-6"
 						style="position: relative; left: 100px;">
 						<a data-toggle="tooltip" title="News" href="#"> <img
-							src="${conPath}/resources/img/news.jpg"> </img>
+							src="${conPath}/resources/img/news.jpg"/> 
 							<div>
 								<strong>&nbsp; &nbsp; &nbsp; News</strong>
 							</div>
@@ -336,7 +343,7 @@
 					<div class="col-md-2 col-sm-3 col-xs-6"
 						style="position: relative; left: 100px;">
 						<a data-toggle="tooltip" title="Settings" href="#"> <img
-							src="${conPath}/resources/img/setting.jpg"> </img>
+							src="${conPath}/resources/img/setting.jpg"/> 
 							<div>
 								<strong>&nbsp; &nbsp; &nbsp; Settings</strong>
 							</div>
@@ -347,6 +354,7 @@
 				</div>
 
 			</div>
+		</div>
 		</div>
 		<!--/.fluid-container-->
 

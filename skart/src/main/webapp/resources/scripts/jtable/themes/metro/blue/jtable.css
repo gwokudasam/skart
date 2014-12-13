@@ -335,9 +335,13 @@ div.jtable-main-container > div.jtable-title div.jtable-toolbar span.jtable-tool
   background-color: #1571d7;
   color: white;
 }
+/* div.jtable-main-container > div.jtable-title div.jtable-toolbar span.jtable-toolbar-item.jtable-toolbar-item-excel span.jtable-toolbar-item-icon {
+  background-image: url('../../metro/excel.png');
+} */
 div.jtable-main-container > div.jtable-title div.jtable-toolbar span.jtable-toolbar-item.jtable-toolbar-item-add-record span.jtable-toolbar-item-icon {
   background-image: url('../../metro/add.png');
 }
+
 div.jtable-main-container > div.jtable-title div.jtable-toolbar span.jtable-toolbar-item.jtable-toolbar-item-hover {
   background-color: #1c78de;
   padding-bottom: 6px;
