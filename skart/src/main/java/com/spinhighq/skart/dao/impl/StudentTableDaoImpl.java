@@ -94,6 +94,11 @@ public class StudentTableDaoImpl implements StudentTableDao {
 		
 		 
 	}
+	@SuppressWarnings("unchecked")
+	public List<String> getClassNameData(String className) {
+		List<String> list=sessionFactory.getCurrentSession().createQuery("from ClassName where className").list();
+		return list;
+	}
 
 	
 

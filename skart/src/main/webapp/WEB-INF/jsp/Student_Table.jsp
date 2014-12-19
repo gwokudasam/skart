@@ -113,7 +113,8 @@ div.jtable-main-container {
 	<div >
 		<form id="abc">
 			Search: <input type="text" name="" id="search" /> 
-			Class: <select id="getSection" name="className">
+			
+			Class: <select  id="getSection" name="className" >
 				<option value="1st class">1st class</option>
 				<option value="2nd class">2nd class</option>
 				<option value="3rd class">3rd class</option>
@@ -125,7 +126,8 @@ div.jtable-main-container {
 				<option value="9th class">9th class</option>
 				<option value="10th class">10th class</option>
 				<option value="0">All Classes</option>
-			</select> section:<select id="recieveSection" name="section">
+			</select> 
+			section:<select id="recieveSection" name="section">
 				<option value="">Selected</option>
 			</select>
 		</form>

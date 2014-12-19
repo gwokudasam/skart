@@ -2,10 +2,7 @@ package com.spinhighq.skart.dao;
 
 import java.util.List;
 
-
-
 import com.spinhighq.skart.model.StudentTable;
-import com.spinhighq.skart.web.dto.datatable.bean.StudentTableBean;
 
 public interface StudentTableDao {
 	
@@ -57,6 +54,8 @@ public interface StudentTableDao {
 	public List<String> getStudentByClassName(String className);
 	
 	public List<StudentTable> getStudentTableData(String className,String section);
+	
+	public List<String> getClassNameData(String className);
 	
 
 }

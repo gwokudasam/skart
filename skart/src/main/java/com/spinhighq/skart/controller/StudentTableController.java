@@ -8,6 +8,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javassist.bytecode.stackmap.TypeData.ClassName;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 
@@ -227,5 +229,25 @@ public class StudentTableController {
 		}
 
 	}
-
+	@RequestMapping(value="/student/className",method=RequestMethod.GET)
+	@ResponseBody
+	public List<String> getClassNameData(@RequestParam String className) throws StudentException{
+		List<String> list = studentTableService.getClassNameData(className);
+		System.out.println(list);
+		return list;
+		
+	}
+	
+	/*@RequestMapping(value="/student/className",method=RequestMethod.GET)
+	@ResponseBody
+	public ModelAndView getClassNameData(@PathVariable String className)throws StudentException{
+		
+		List<String> list = studentTableService.getClassNameData(className);
+		
+		ModelAndView model = new ModelAndView("/resources/scripts/student.jtable.js");
+		model.addObject("list",list);
+		return model;
+		
+	}
+*/
 }

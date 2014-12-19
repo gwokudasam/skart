@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.spinhighq.skart.business.exception.StudentException;
 import com.spinhighq.skart.dao.StudentTableDao;
+import com.spinhighq.skart.model.ClassName;
 import com.spinhighq.skart.model.StudentTable;
 import com.spinhighq.skart.service.StudentTableService;
 import com.spinhighq.skart.web.dto.datatable.bean.StudentTableBean;
@@ -218,6 +219,23 @@ public class StudentTableServiceImpl implements StudentTableService {
 			
 		}
 		return studentTableData;
+	}
+	
+	@Transactional
+	@Override
+	public List<String> getClassNameData(String className) throws StudentException {
+		
+		try{
+
+			List<String> classList= tableDao.getClassNameData(className);
+			
+			
+			return classList;
+		}
+		catch(Exception e){
+			e.printStackTrace();
+			throw new StudentException("Exception while get the no data in the dable"+e.getMessage());
+		}
 	}
 
 }

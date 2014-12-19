@@ -17,33 +17,32 @@
 		<a href="#" data-toggle="tooltip" title="Student Details"
 			id="Student_Table1" name="Student_Table"
 			onClick="ajaxCallback(this);"> <img
-			src="${conPath}/resources/img/student-details.jpg"> </img>
-			<div>
+			src="${conPath}/resources/img/student-details.jpg"/> 
+			
 				<strong>Student Details</strong>
-			</div>
-
+			
 		</a>
 	</div>
 
 	<div class="col-md-2 col-sm-3 col-xs-6"
 		style="position: relative; left: 100px;">
 		<a data-toggle="tooltip" title="Employee Details" href="#"
-		id="Employee_Table1" name="Employee_Table" onClick="ajaxCallback(this);""> <img
-			src="${conPath}/resources/img/employee.png"> </img>
-			<div>
+		id="Employee_Table1" name="Employee_Table" onClick="ajaxCallback(this);"> <img
+			src="${conPath}/resources/img/employee.png"/> 
+			
 				<strong>Employee Details</strong>
-			</div>
+			
 
 		</a>
 	</div>
 
 	<div class="col-md-2 col-sm-3 col-xs-6"
 		style="position: relative; left: 100px;">
-		<a data-toggle="tooltip" title="Parent Details" href="#"> <img
-			src="${conPath}/resources/img/parents.png"> </img>
-			<div>
-				<strong> &nbsp; &nbsp; Parent Details</strong>
-			</div>
+		<a data-toggle="tooltip" title="Parent Details" href="#" 
+		id="Parent_Table1" name="Parent_Table" onClick="ajaxCallback(this);"> 
+		<img src="${conPath}/resources/img/parents.png"/> 
+				<strong> Parent Details</strong>
+			
 
 		</a>
 	</div>
@@ -54,10 +53,9 @@
 	<div class="col-md-2 col-sm-3 col-xs-6"
 		style="position: relative; left: 100px;">
 		<a data-toggle="tooltip" title="Students Attendance" href="#"> <img
-			src="${conPath}/resources/img/attendance.jpg"> </img>
-			<div>
+			src="${conPath}/resources/img/attendance.jpg"/> 
 				<strong>Students Attendance</strong>
-			</div>
+		
 
 		</a>
 	</div>
@@ -65,18 +63,17 @@
 	<div class="col-md-2 col-sm-3 col-xs-6"
 		style="position: relative; left: 100px;">
 		<a data-toggle="tooltip" title="Employee Attendance" href="#"> <img
-			src="${conPath}/resources/img/teacher_attendance.png"> </img>
-			<div>
+			src="${conPath}/resources/img/teacher_attendance.png"/> 
+			
 				<strong>Employee Attendance</strong>
-			</div>
-
+			
 		</a>
 	</div>
 
 	<div class="col-md-2 col-sm-3 col-xs-6"
 		style="position: relative; left: 100px;">
 		<a data-toggle="tooltip" title="Class Timetable" href="#"> <img
-			src="${conPath}/resources/img/timetable.png"> </img>
+			src="${conPath}/resources/img/timetable.png"/> 
 			<div>
 				<strong>Class Timetable</strong>
 			</div>
@@ -91,7 +88,7 @@
 	<div class="col-md-2 col-sm-3 col-xs-6"
 		style="position: relative; left: 100px;">
 		<a data-toggle="tooltip" title="Exams Schedule" href="#"> <img
-			src="${conPath}/resources/img/examshedule.png"> </img>
+			src="${conPath}/resources/img/examshedule.png"/> 
 			<div>
 				<strong>Exams Schedule</strong>
 			</div>
@@ -102,23 +99,23 @@
 	<div class="col-md-2 col-sm-3 col-xs-6"
 		style="position: relative; left: 100px;">
 		<a data-toggle="tooltip" title="News" href="#"> <img
-			src="${conPath}/resources/img/news.jpg"> </img>
+			src="${conPath}/resources/img/news.jpg"/>
 			<div>
-				<strong>&nbsp; &nbsp; &nbsp; News</strong>
+				<strong>News</strong>
 			</div>
-
 		</a>
 	</div>
 
 	<div class="col-md-2 col-sm-3 col-xs-6"
 		style="position: relative; left: 100px;">
 		<a data-toggle="tooltip" title="Settings" href="#"> <img
-			src="${conPath}/resources/img/setting.jpg"> </img>
-			<div>
-				<strong>&nbsp; &nbsp; &nbsp; Settings</strong>
-			</div>
+			src="${conPath}/resources/img/setting.jpg"/> 
+			
+				<strong>Settings</strong>
+			
 
 		</a>
+		
 	</div>
 
 </div>

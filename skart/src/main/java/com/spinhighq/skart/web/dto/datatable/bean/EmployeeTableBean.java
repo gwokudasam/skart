@@ -21,7 +21,7 @@ public class EmployeeTableBean {
 	
 	private String address;
 	
-	private String parentName;
+	private String fatherName;
 	
 	private String mobilePhone;
 		
@@ -38,6 +38,28 @@ public class EmployeeTableBean {
 	private String photo;
 	
 	private String gender;
+	
+	private String department;
+	
+	private String category;
+	
+	private String position;
+	
+	private String grade;
+	
+	private String jobTitle;
+	
+	private String qualification;
+	
+	private String motherName;
+	
+	private String experienceInfo;
+	
+	private String totalExperience;
+	
+	private String maritalStatus;
+	
+	private String nationality;
 	
 	@JsonProperty("EmployeeId")
 	public String getEmployeeId() {
@@ -111,13 +133,13 @@ public class EmployeeTableBean {
 		this.mobilePhone = mobilePhone;
 	}
 
-	@JsonProperty("ParentName")
-	public String getParentName() {
-		return parentName;
+	@JsonProperty("FatherName")
+	public String getFatherName() {
+		return fatherName;
 	}
 
-	public void setParentName(String parentName) {
-		this.parentName = parentName;
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
 	}
 
 	@JsonProperty("Section")
@@ -182,6 +204,108 @@ public class EmployeeTableBean {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
+	
+	@JsonProperty("Department")
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+	
+	@JsonProperty("Category")
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+	
+	@JsonProperty("Position")
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+	
+	@JsonProperty("Grade")
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	
+	@JsonProperty("JobTitle")
+	public String getJobTitle() {
+		return jobTitle;
+	}
+	
+	
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+	
+	@JsonProperty("Qualification")
+	public String getQualification() {
+		return qualification;
+	}
+
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+
+	@JsonProperty("MotherName")
+	public String getMotherName() {
+		return motherName;
+	}
+
+	public void setMotherName(String motherName) {
+		this.motherName = motherName;
+	}
+	
+	@JsonProperty("ExperienceInfo")
+	public String getExperienceInfo() {
+		return experienceInfo;
+	}
+
+	public void setExperienceInfo(String experienceInfo) {
+		this.experienceInfo = experienceInfo;
+	}
+	
+	@JsonProperty("TotalExperience")
+	public String getTotalExperience() {
+		return totalExperience;
+	}
+
+	public void setTotalExperience(String totalExperience) {
+		this.totalExperience = totalExperience;
+	}
+
+	@JsonProperty("MaritalStatus")
+	public String getMaritalStatus() {
+		return maritalStatus;
+	}
+
+	public void setMaritalStatus(String maritalStatus) {
+		this.maritalStatus = maritalStatus;
+	}
+	
+	@JsonProperty("Nationality")
+	public String getNationality() {
+		return nationality;
+	}
+
+	public void setNationality(String nationality) {
+		this.nationality = nationality;
+	}
+	
+	
 	
 	
 	

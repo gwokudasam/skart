@@ -3,6 +3,7 @@ package com.spinhighq.skart.service;
 import java.util.List;
 
 import com.spinhighq.skart.business.exception.StudentException;
+import com.spinhighq.skart.model.ClassName;
 import com.spinhighq.skart.model.StudentTable;
 import com.spinhighq.skart.web.dto.datatable.bean.StudentTableBean;
 
@@ -26,6 +27,8 @@ public interface StudentTableService {
 	public List<StudentTable> getStudentData()throws StudentException;
 	
 	public List<StudentTableBean> getStudentTableData(String className,String section)throws StudentException;
+	
+	public List<String> getClassNameData(String className)throws StudentException;
 	
 	
 	

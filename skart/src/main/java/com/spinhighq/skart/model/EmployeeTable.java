@@ -29,7 +29,7 @@ public class EmployeeTable {
 	
 	private String address;
 	
-	private String parentName;
+	private String fatherName;
 	
 	private Long mobilePhone;
 	
@@ -44,37 +44,73 @@ public class EmployeeTable {
 	
 	private String photo;
 	
-	
 	private String gender;
+	
+	private String department;
+	
+	private String category;
+	
+	private String position;
+	
+	private String grade;
+	
+	private String jobTitle;
+	
+	private String qualification;
+	
+	private String motherName;
+	
+	private String experienceInfo;
+	
+	private String totalExperience;
+	
+	private String maritalStatus;
+	
+	private String nationality;
 
 	public EmployeeTable() {
 		super();
 		
 	}
 
+	
 	public EmployeeTable(Integer id, String name, String email,
-			String dateOfBirth, /*String className,*/ String dateOfJoning,
-			String bloadGroup, String address, String parentName,
-			Long mobilePhone, /*String section,*/ Float currentAttendance,
-			Float overalAttendance, Float performanceRating, String photo, String gender) {
+			String dateOfBirth, String dateOfJoning, String bloadGroup,
+			String address, String fatherName, Long mobilePhone,
+			Float currentAttendance, Float overalAttendance,
+			Float performanceRating, String photo, String gender,
+			String department, String category, String position, String grade,
+			String jobTitle, String qualification, String motherName,
+			String experienceInfo, String totalExperience,
+			String maritalStatus, String nationality) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.dateOfBirth = dateOfBirth;
-		//this.className = className;
 		this.dateOfJoning = dateOfJoning;
 		this.bloadGroup = bloadGroup;
 		this.address = address;
-		this.parentName = parentName;
+		this.fatherName = fatherName;
 		this.mobilePhone = mobilePhone;
-		//this.section = section;
 		this.currentAttendance = currentAttendance;
 		this.overalAttendance = overalAttendance;
 		this.performanceRating = performanceRating;
 		this.photo = photo;
-		this.gender=gender;
+		this.gender = gender;
+		this.department = department;
+		this.category = category;
+		this.position = position;
+		this.grade = grade;
+		this.jobTitle = jobTitle;
+		this.qualification = qualification;
+		this.motherName = motherName;
+		this.experienceInfo = experienceInfo;
+		this.totalExperience = totalExperience;
+		this.maritalStatus = maritalStatus;
+		this.nationality = nationality;
 	}
+
 
 	@Id
 	@GeneratedValue
@@ -163,13 +199,13 @@ public class EmployeeTable {
 		this.mobilePhone = mobilePhone;
 	}
 
-	@Column(name="ParentName")
-	public String getParentName() {
-		return parentName;
+	@Column(name="FathertName")
+	public String getFatherName() {
+		return fatherName;
 	}
 
-	public void setParentName(String parentName) {
-		this.parentName = parentName;
+	public void setFatherName(String fatherName) {
+		this.fatherName = fatherName;
 	}
 
 	//@ManyToOne
@@ -223,9 +259,121 @@ public class EmployeeTable {
 	public String getPhoto() {
 		return photo;
 	}
-
+	
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
+
+	@Column(name="Department")
+	public String getDepartment() {
+		return department;
+	}
+
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	@Column(name="Category")
+	public String getCategory() {
+		return category;
+	}
+
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	@Column(name="Position")
+	public String getPosition() {
+		return position;
+	}
+
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
+	@Column(name="Grade")
+	public String getGrade() {
+		return grade;
+	}
+
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+	
+	@Column(name="JobTitle")
+	public String getJobTitle() {
+		return jobTitle;
+	}
+
+
+	public void setJobTitle(String jobTitle) {
+		this.jobTitle = jobTitle;
+	}
+
+	@Column(name="Qualification")
+	public String getQualification() {
+		return qualification;
+	}
+
+
+	public void setQualification(String qualification) {
+		this.qualification = qualification;
+	}
+
+	@Column(name="MotherName")
+	public String getMotherName() {
+		return motherName;
+	}
+
+
+	public void setMotherName(String motherName) {
+		this.motherName = motherName;
+	}
+
+	@Column(name="ExperienceInfo")
+	public String getExperienceInfo() {
+		return experienceInfo;
+	}
+
+
+	public void setExperienceInfo(String experienceInfo) {
+		this.experienceInfo = experienceInfo;
+	}
+
+	@Column(name="TotalExperience")
+	public String getTotalExperience() {
+		return totalExperience;
+	}
+
+
+	public void setTotalExperience(String totalExperience) {
+		this.totalExperience = totalExperience;
+	}
+	
+	@Column(name="MaritalStatus")
+	public String getMaritalStatus() {
+		return maritalStatus;
+	}
+
+
+	public void setMaritalStatus(String maritalStatus) {
+		this.maritalStatus = maritalStatus;
+	}
+
+	@Column(name="Nationality")
+	public String getNationality() {
+		return nationality;
+	}
+
+
+	public void setNationality(String nationality) {
+		this.nationality = nationality;
+	}
+	
+	
 	
 }

@@ -107,7 +107,7 @@ public class EmployeePDFBuilder extends AbstractITextPdfView{
 			employeeTable.addCell(employeeData.getBloadGroup());
 			employeeTable.addCell(employeeData.getAddress());
 			employeeTable.addCell(employeeData.getMobilePhone()+"");
-			employeeTable.addCell(employeeData.getParentName());
+			employeeTable.addCell(employeeData.getFatherName());
 			employeeTable.addCell(employeeData.getCurrentAttendance()+"");
 			employeeTable.addCell(employeeData.getOveralAttendance()+"");
 			employeeTable.addCell(employeeData.getPerformanceRating()+"");

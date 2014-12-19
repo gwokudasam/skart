@@ -19,7 +19,7 @@ public class EmployeeFillManager {
 	  * @param startColIndex starting column offset
 	  * @param datasource the data source
 	  */
-	 @SuppressWarnings("unused")
+	 
 	public static void fillReport(HSSFSheet worksheet, int startRowIndex, int startColIndex, List<EmployeeTable> employeeData) {
 	  // Row offset
 	  startRowIndex += 2;
@@ -78,7 +78,7 @@ public class EmployeeFillManager {
 	   
 	   // Retrieve the parentName value
 	   HSSFCell cell9 = row.createCell(startColIndex+8);
-	   cell9.setCellValue(employeeData.get(i-2).getParentName());
+	   cell9.setCellValue(employeeData.get(i-2).getFatherName());
 	   cell9.setCellStyle(bodyCellStyle);
 	   
 	   

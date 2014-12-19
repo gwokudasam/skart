@@ -1,4 +1,4 @@
-/*package com.spinhighq.skart.model;
+package com.spinhighq.skart.model;
 
 
 import java.util.Set;
@@ -46,4 +46,3 @@ public class ClassName {
 	
 
 }
-*/

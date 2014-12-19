@@ -185,9 +185,10 @@
 									class="glyphicon glyphicon-align-justify"></i><span>
 										Employee Details </span></a></li>
 										
-							<li><a class="ajax-link" href="parent-table.html"><i
-									class="glyphicon glyphicon-th-large"></i><span> Parents
+							<li><a href="#" id="Parent_Table" name="Parent_Table"onClick="ajaxCallback(this);">
+							<i class="glyphicon glyphicon-th-large"></i><span> Parents
 										Details </span></a></li>
+										
 							<li><a class="ajax-link" href="#"><i
 									class="glyphicon glyphicon-check"></i><span> Students
 										Attendance </span></a></li>
@@ -203,8 +204,9 @@
 							<li><a class="ajax-link" href="#"><i
 									class="glyphicon glyphicon-bullhorn"></i><span> News </span></a></li>
 							<li><a class="ajax-link" href="#"><i
-									class="glyphicon glyphicon-cog"></i><span> Settings </span></a></li>
-							<li><a class="ajax-link" href="calendar.html"><i
+									class="glyphicon glyphicon-cog"></i><span>Settings </span></a></li>
+							
+							<li><a  href="#" id="Calendar" name="Calendar" onClick="ajaxCallback(this);"><i
 									class="glyphicon glyphicon-calendar"></i><span> Calendar</span></a>
 							</li>
 							<li><a class="ajax-link" href="login.html"><i
@@ -248,10 +250,7 @@
 							id="Student_Table1" name="Student_Table"
 							onClick="ajaxCallback(this);"> <img
 							src="${conPath}/resources/img/student-details.jpg"/> 
-							
-								<div>
-									<strong>StudentDetails</strong>
-								</div>
+								<strong>StudentDetails</strong>
 								</a>
 					</div>
 
@@ -261,22 +260,17 @@
 							id="Employee_Table1" name="Employee_Table"
 							onClick="ajaxCallback(this);"> <img
 							src="${conPath}/resources/img/employee.png" />
-							<div>
-								<strong>Employee Details</strong>
-							</div>
-
+							<strong>Employee Details</strong>
 						</a>
 					</div>
 
 					<div class="col-md-2 col-sm-3 col-xs-6"
 						style="position: relative; left: 100px;">
-						<a data-toggle="tooltip" title="Parent Details" href="#"> <img
+						<a data-toggle="tooltip" title="Parent Details" href="#"
+						id="Parent_Table1" name="Parent_Table" onClick="ajaxCallback(this);"> <img
 							src="${conPath}/resources/img/parents.png"/>
-							<div>
-								<strong> &nbsp; &nbsp; Parent Details</strong>
-							</div>
-
-						</a>
+							<strong> &nbsp; &nbsp; Parent Details</strong>
+							</a>
 					</div>
 				</div>
 				<br> <br>
@@ -334,7 +328,7 @@
 						<a data-toggle="tooltip" title="News" href="#"> <img
 							src="${conPath}/resources/img/news.jpg"/> 
 							<div>
-								<strong>&nbsp; &nbsp; &nbsp; News</strong>
+								<strong>News</strong>
 							</div>
 
 						</a>
@@ -345,7 +339,7 @@
 						<a data-toggle="tooltip" title="Settings" href="#"> <img
 							src="${conPath}/resources/img/setting.jpg"/> 
 							<div>
-								<strong>&nbsp; &nbsp; &nbsp; Settings</strong>
+								<strong>Settings</strong>
 							</div>
 
 						</a>

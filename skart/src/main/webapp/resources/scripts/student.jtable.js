@@ -1,11 +1,11 @@
 /* 
  * JavaScript to manage the JTable
  */
-
+ 
 $(document).ready(function() { 
     //setup the jTable that will display the results
+	
     $('#StudentTableContainer').jtable({
-    	
         title: 'Student Table',
         defaultSorting: 'Name ASC',
         paging: true, //Enable paging
@@ -39,8 +39,9 @@ $(document).ready(function() {
             	
             },
             ClassName:{
-            	title: 'Class',
-            	options:{'1st Class':'1st Class','2nd Class':'2nd Class','3rd Class':'3rd Class','4th Class':'4th Class','5th Class':'5th Class','6th Class':'6th Class','7th Class':'7th Class','8th Class':'8th Class','9th Class':'9th Class','10th Class':'10th Class'},
+               	title: 'Class',
+            	//options:'${baseURL}/student/className',
+               	options:{'1st Class':'1st Class','2nd Class':'2nd Class','3rd Class':'3rd Class','4th Class':'4th Class','5th Class':'5th Class','6th Class':'6th Class','7th Class':'7th Class','8th Class':'8th Class','9th Class':'9th Class','10th Class':'10th Class'},
             	display: function (data) {
                     return '<div style="width:82px;">' + data.record.ClassName +'</div>';
                 }

@@ -133,13 +133,18 @@ $(document).ready(function() {
             	//list: false,
             	//width :'9%'
             },
-            ParentName : {
-            	title : 'ParentName',
+            FatherName : {
+            	title : 'FatherName',
             	/*display: function (data) {
 	                return '<div style="width:82px;">' + data.record.ParentName +'</div>';
             	}*/
             	
             },
+            MotherName : {
+            	title : 'MotherName',
+            	list:false
+            },
+            
             Address :{
             	title : 'Address',
             	display: function (data) {
@@ -162,10 +167,24 @@ $(document).ready(function() {
             	
             },
             ExperienceInfo:{
-            	title:'expInfo',
+            	title:'exp Info',
             	list:false
             	
             },
+            TotalExperience:{
+            	title:'Total Experience',
+            	list:false
+            	
+            },
+            MaritalStatus:{
+            	title:'Marital Status',
+            	options:{'Single':'Single','Married':'Married'}
+            },
+            Nationality:{
+            	title:'Nationality'
+            	
+            },
+            
             Photo: {
             	title: 'photo',       	
             	method:'post',

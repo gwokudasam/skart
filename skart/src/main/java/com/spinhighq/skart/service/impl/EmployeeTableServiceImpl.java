@@ -43,10 +43,21 @@ public class EmployeeTableServiceImpl implements EmployeeTableService {
 			employeeTable.setCurrentAttendance(new Float(bean.getCurrentAttendance()));
 			employeeTable.setOveralAttendance(new Float(bean.getOveralAttendance()));
 			employeeTable.setPerformanceRating(new Float(bean.getPerformanceRating()));
-			employeeTable.setParentName(bean.getParentName());
+			employeeTable.setFatherName(bean.getFatherName());
 			employeeTable.setMobilePhone(new Long(bean.getMobilePhone()));
 			employeeTable.setPhoto(bean.getPhoto());
 			employeeTable.setGender(bean.getGender());
+			employeeTable.setDepartment(bean.getDepartment());
+			employeeTable.setGrade(bean.getGrade());
+			employeeTable.setCategory(bean.getCategory());
+			employeeTable.setExperienceInfo(bean.getExperienceInfo());
+			employeeTable.setTotalExperience(bean.getTotalExperience());
+			employeeTable.setJobTitle(bean.getJobTitle());
+			employeeTable.setQualification(bean.getQualification());
+			employeeTable.setNationality(bean.getNationality());
+			employeeTable.setMaritalStatus(bean.getMaritalStatus());
+			employeeTable.setMotherName(bean.getMotherName());
+			employeeTable.setPosition(bean.getPosition());
 			employeeTableDao.addEmployee(employeeTable);
 		}
 		catch(Exception e){
@@ -80,9 +91,23 @@ public class EmployeeTableServiceImpl implements EmployeeTableService {
 				bean.setOveralAttendance(employeeTable.getOveralAttendance().floatValue());
 				bean.setCurrentAttendance(employeeTable.getCurrentAttendance().floatValue());
 				bean.setPerformanceRating(employeeTable.getPerformanceRating().floatValue());
-				bean.setParentName(employeeTable.getParentName());
+				bean.setFatherName(employeeTable.getFatherName());
 				bean.setPhoto(employeeTable.getPhoto());
 				bean.setGender(employeeTable.getGender());
+				bean.setMotherName(employeeTable.getMotherName());
+				bean.setMaritalStatus(employeeTable.getMaritalStatus());
+				bean.setCategory(employeeTable.getCategory());
+				bean.setExperienceInfo(employeeTable.getExperienceInfo());
+				bean.setTotalExperience(employeeTable.getTotalExperience());
+				bean.setDepartment(employeeTable.getDepartment());
+				bean.setGrade(employeeTable.getGrade());
+				bean.setQualification(employeeTable.getQualification());
+				bean.setPosition(employeeTable.getPosition());
+				bean.setJobTitle(employeeTable.getJobTitle());
+				bean.setNationality(employeeTable.getNationality());
+				
+				
+				
 				list.add(bean);
 			}
 			
@@ -101,20 +126,31 @@ public class EmployeeTableServiceImpl implements EmployeeTableService {
 		try{
 			EmployeeTable employeeTable=employeeTableDao.getEmployee(new Integer(bean.getEmployeeId()));
 			employeeTable.setName(bean.getName());
+			employeeTable.setEmail(bean.getEmail());
 			employeeTable.setAddress(bean.getAddress());
 			/*employeeTable.setClassName(bean.getClassName());
 			employeeTable.setSection(bean.getSection());*/
-			employeeTable.setBloadGroup(bean.getBloadGroup());
 			employeeTable.setDateOfBirth(bean.getDateOfBirth());
+			employeeTable.setBloadGroup(bean.getBloadGroup());
 			employeeTable.setDateOfJoning(bean.getDateOfJoning());
-			employeeTable.setEmail(bean.getEmail());
-			employeeTable.setMobilePhone(new Long(bean.getMobilePhone()));
-			employeeTable.setParentName(bean.getParentName());
 			employeeTable.setCurrentAttendance(new Float(bean.getCurrentAttendance()));
 			employeeTable.setOveralAttendance(new Float(bean.getOveralAttendance()));
-			employeeTable.setPerformanceRating(new Float(bean.getOveralAttendance()));
+			employeeTable.setPerformanceRating(new Float(bean.getPerformanceRating()));
+			employeeTable.setFatherName(bean.getFatherName());
+			employeeTable.setMobilePhone(new Long(bean.getMobilePhone()));
 			employeeTable.setPhoto(bean.getPhoto());
 			employeeTable.setGender(bean.getGender());
+			employeeTable.setDepartment(bean.getDepartment());
+			employeeTable.setGrade(bean.getGrade());
+			employeeTable.setCategory(bean.getCategory());
+			employeeTable.setExperienceInfo(bean.getExperienceInfo());
+			employeeTable.setTotalExperience(bean.getTotalExperience());
+			employeeTable.setJobTitle(bean.getJobTitle());
+			employeeTable.setQualification(bean.getQualification());
+			employeeTable.setNationality(bean.getNationality());
+			employeeTable.setMaritalStatus(bean.getMaritalStatus());
+			employeeTable.setMotherName(bean.getMotherName());
+			employeeTable.setPosition(bean.getPosition());
 			
 			employeeTableDao.updateEmployee(employeeTable);
 			
